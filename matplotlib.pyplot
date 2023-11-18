@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read a CSV file into a Pandas DataFrame
+data = pd.read_csv('sample_data.csv')
+
+# Display the first few rows of the DataFrame
+print("First few rows of the DataFrame:")
+print(data.head())
+
+# Perform some basic data analysis
+average_age = data['Age'].mean()
+max_salary = data['Salary'].max()
+
+print("\nData Analysis:")
+print(f"Average Age: {average_age}")
+print(f"Maximum Salary: {max_salary}")
+
+# Create a simple scatter plot
+plt.scatter(data['Age'], data['Salary'])
+plt.title('Age vs. Salary')
+plt.xlabel('Age')
+plt.ylabel('Salary')
+plt.show()
